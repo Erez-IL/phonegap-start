@@ -39,7 +39,7 @@
     function onDeviceReady() {
         // Empty
          navigator.notification.vibrate(1000);
-   navigator.notification.alert("Hello");
+   navigator.notification.alert('Hello);
    navigator.notification.beep(1);  
     }
 
@@ -55,29 +55,7 @@
     
     
     
-    function changePicture(event) {
-    event.preventDefault();
-    if (!navigator.camera) {
-        app.showAlert("Camera API not supported", "Error");
-        return;
-    }
-    var options =   {   quality: 50,
-                        destinationType: Camera.DestinationType.DATA_URL,
-                        sourceType: 1,      // 0:Photo Library, 1=Camera, 2=Saved Photo Album
-                        encodingType: 0     // 0=JPG 1=PNG
-                    };
- 
-    navigator.camera.getPicture(
-        function(imageData) {
-            $('.employee-image', this.el).attr('src', "data:image/jpeg;base64," + imageData);
-        },
-        function() {
-            app.showAlert('Error taking picture', 'Error');
-        },
-        options);
- 
-    return false;
-}
+
     
     
 
@@ -87,10 +65,11 @@
         navigator.notification.beep(3);
     }
 
-    // Vibrate for 2 seconds
+    // Vibrate for 6 seconds
     //
-    function vibrate() {
-        navigator.notification.vibrate(6000);
+    function vibrate(p) {
+        
+        navigator.notification.vibrate(p);
     }
     
 
@@ -109,13 +88,24 @@
       </div>
       <h1>.      .</h1>
   <h1>.      .</h1><div>
-    <h1><a href="#" onclick="vibrate(); return false;">Vibrate</a></h1>
+    <h1><a href="#" onclick="vibrate('2000'); return false;">Vibrate 2sec</a></h1>
     </div>
     <h1>.      .</h1>
       <h1>.      .</h1><div>
-    <h1><a href="#" onclick="changePicture(); return false;">Pic</a></h1>
+    <h1><a href="#" onclick="vibrate('4000'); return false;">Vibrate 4sec</a></h1>
     </div>
     <h1>.      .</h1>
+      <h1>.      .</h1><div>
+    <h1><a href="#" onclick="vibrate('6000'); return false;">Vibrate 6sec</a></h1>
+    </div>
+    <h1>.      .</h1>
+      <h1>.      .</h1><div>
+    <h1><a href="#" onclick="vibrate('8000'); return false;">Vibrate 7sec</a></h1>
+    </div>
+    <h1>.      .</h1>
+      <h1>.      .</h1><div>
+    <h1><a href="#" onclick="vibrate('10000'); return false;">Vibrate 10sec</a></h1>
+    </div>
     <h1>.      .</h1>
   
         <script type="text/javascript" src="phonegap.js"></script>
