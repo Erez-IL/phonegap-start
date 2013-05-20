@@ -38,6 +38,9 @@
     //
     function onDeviceReady() {
         // Empty
+         navigator.notification.vibrate(1000);
+   navigator.notification.alert("Hello");
+   navigator.notification.beep(1);  
     }
 
     // Show a custom alert
@@ -61,6 +64,7 @@
     function vibrate() {
         navigator.notification.vibrate(6000);
     }
+    
 
     </script>
   </head>
