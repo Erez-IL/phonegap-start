@@ -67,11 +67,26 @@
 
     // Vibrate for 6 seconds
     //
-    function vibrate() {
+    function vibrate05() {
+        
+        navigator.notification.vibrate(500);
+    }
+        function vibrate1() {
+        
+        navigator.notification.vibrate(1000);
+    }
+        function vibrate2() {
+        
+        navigator.notification.vibrate(2000);
+    }
+        function vibrate4() {
+        
+        navigator.notification.vibrate(4000);
+    }
+        function vibrate6() {
         
         navigator.notification.vibrate(6000);
     }
-    
 
     </script>
   </head>
@@ -87,10 +102,11 @@
 <h1><a href="#" onclick="playBeep(); return false;">Play Beep</a></h1>
       </div>
       <h1>.      .</h1>
-  <h1>.      .</h1><div>
-    <h1><a href="#" onclick="vibrate(); return false;" style="font-size:18px;">Vibrate </a></h1>
-    </div>
-    <h1>.      .</h1>
+<h1>.      .</h1><div><a href="#" onclick="vibrate05(); return false;" style="font-size:26px;">Vibrate 05</a></div><h1>.      .</h1>
+<h1>.      .</h1><div><a href="#" onclick="vibrate1(); return false;" style="font-size:26px;">Vibrate 1</a></div><h1>.      .</h1>
+<h1>.      .</h1><div><a href="#" onclick="vibrate2(); return false;" style="font-size:26px;">Vibrate 2</a></div><h1>.      .</h1>
+<h1>.      .</h1><div><a href="#" onclick="vibrate4(); return false;" style="font-size:26px;">Vibrate 4</a></div><h1>.      .</h1>
+<h1>.      .</h1><div><button href="#" onclick="vibrate6(); return false;" style="font-size:26px;">Vibrate 6</button></div><h1>.      .</h1>
 
   
         <script type="text/javascript" src="phonegap.js"></script>
