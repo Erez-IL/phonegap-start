@@ -85,10 +85,13 @@
         
     }
     function vibrate() {
-        for(var i=1;i<5;i++){
-            setTimeout(function(){navigator.notification.vibrate((document.getElementById('slider1').value)*1000/i)}, 500);
-        }
-        
+        var time=(document.getElementById('slider1').value)*1000;
+        setTimeout(function(){navigator.notification.vibrate(time)}, 10);
+        setTimeout(function(){navigator.notification.vibrate(time)}, 10+time);
+        setTimeout(function(){navigator.notification.vibrate(time)}, 1500);
+        setTimeout(function(){navigator.notification.vibrate(time)}, 2000);
+        setTimeout(function(){navigator.notification.vibrate(time)}, 2500);
+                
         
     }
     
@@ -114,9 +117,10 @@
     <button href="#" class="btn span3 " onclick="vibrateMix(); return false;" style="font-size:26px;">Vibrate Mix            
         
     </button>
-    <button href="#" class="btn span3 " onclick="vibrate(); return false;" style="font-size:26px;">Vibrate Mix            
+    <div class="well">
+    <button href="#" class="btn span3 " onclick="vibrate(); return false;" style="font-size:26px;">Vibrate delay            
         
-    </button>
+    </button></div>
         
     </div>
 </div>
