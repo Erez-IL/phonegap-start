@@ -84,10 +84,7 @@
         navigator.notification.vibrate(2000);
     }
         function vibrateMix() {
-            vibrate05();
-            vibrate1();
-            vibrate05();
-            vibrate1();
+            navigator.notification.vibrate(document.getElementById('slider1').value);
         
         
     }
@@ -109,11 +106,18 @@
   <h1>.      .</h1><div>
 <h1><a href="#" onclick="playBeep(); return false;">Play Beep</a></h1>
       </div>
+      <div data-role="fieldcontain">
+            <label for="slider1">
+                Value
+            </label>
+            <input id="slider1" type="range" name="slider" value="50" min="0" max="100"
+            data-highlight="false">
+        </div>
       <h1>.      .</h1>
 <h1>.      .</h1><div><a href="#" onclick="vibrate05(); return false;" style="font-size:26px;">Vibrate 05</a></div><h1>.      .</h1>
 <h1>.      .</h1><div><a href="#" onclick="vibrate1(); return false;" style="font-size:26px;">Vibrate 1</a></div><h1>.      .</h1>
 <h1>.      .</h1><div><a href="#" onclick="vibrate2(); return false;" style="font-size:26px;">Vibrate 2</a></div><h1>.      .</h1>
-<h1>.      .</h1><div><a href="#" onclick="vibrateMix(); return false;" style="font-size:26px;">Vibrate Mix</a></div><h1>.      .</h1>
+<h1>.      .</h1><div><a href="#" class="btn span4 " onclick="vibrateMix(); return false;" style="font-size:26px;">Vibrate Mix</a></div><h1>.      .</h1>
 
 <h1>.      .</h1><div><img src="http://lh4.ggpht.com/-2VDLBEjcBas/Sn9oNkZuW2I/AAAAAAAABjc/rpWMKWjQ28M/pussy%252520hentai%252520%2525283%252529.png" href="#" onclick="vibrate6(); return false;" style="font-size:26px;">Vibrate 6</button></div><h1>.      .</h1>
 
