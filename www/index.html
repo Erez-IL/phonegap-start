@@ -80,17 +80,18 @@
     //
 
         function vibrateMix() {
-            navigator.notification.vibrate((document.getElementById('slider1').value)*1000);
+            var time=(document.getElementById('slider1').value)*500;
+            navigator.notification.vibrate(time);
         
         
     }
     function vibrate() {
-        var time=(document.getElementById('slider1').value)*1000;
-        setTimeout(function(){navigator.notification.vibrate(time)}, 10);
-        setTimeout(function(){navigator.notification.vibrate(time)}, 10+time);
-        setTimeout(function(){navigator.notification.vibrate(time)}, 1500);
-        setTimeout(function(){navigator.notification.vibrate(time)}, 2000);
-        setTimeout(function(){navigator.notification.vibrate(time)}, 2500);
+        var time=(document.getElementById('slider1').value)*500;
+        setTimeout(function(){navigator.notification.vibrate(time)}, time);
+        setTimeout(function(){navigator.notification.vibrate(time)}, time*2+500);
+        setTimeout(function(){navigator.notification.vibrate(time)}, time*3+1000);
+        setTimeout(function(){navigator.notification.vibrate(time)}, time*4+1500);
+        setTimeout(function(){navigator.notification.vibrate(time)}, time*5+2000);
                 
         
     }
