@@ -87,11 +87,11 @@
     }
     function vibrate() {
         var time=(document.getElementById('slider1').value)*500;
-        setTimeout(function(){navigator.notification.vibrate(time)}, time);
+        setTimeout(function(){navigator.notification.vibrate(time)}, 10);        
         setTimeout(function(){navigator.notification.vibrate(time)}, time*2+500);
-        setTimeout(function(){navigator.notification.vibrate(time)}, time*3+1000);
-        setTimeout(function(){navigator.notification.vibrate(time)}, time*4+1500);
-        setTimeout(function(){navigator.notification.vibrate(time)}, time*5+2000);
+        setTimeout(function(){navigator.notification.vibrate(time/2)}, time*3+1000);
+        setTimeout(function(){navigator.notification.vibrate(time*2)}, time*4+1500);
+        setTimeout(function(){navigator.notification.vibrate(time)}, time*6+2000);
                 
         
     }
